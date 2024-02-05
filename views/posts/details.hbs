@@ -1,0 +1,13 @@
+<h1>Details</h1>
+<a class="btn btn-primary" href="../index.hbs">Back to Blog page</a>
+<section class="row">
+    {{#each posts}}
+    <h4>{{this.title}}</h4>
+    <p>{{this.body}}</p>
+            <p>Posted: 
+            <span class="badge text-bg-secondary">{{this.date}} </span>
+            by {{this.username}}
+        </p>
+                <a href="/posts/{{this._id}}" class="btn btn-info">Read More</a>
+        {{/each}}
+</section>
